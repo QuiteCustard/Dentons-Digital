@@ -14,7 +14,7 @@ html {
   box-sizing: inherit;
 }
 
-* {
+body, header {
   padding: 0;
   margin: 0;
 }
@@ -25,6 +25,7 @@ button {
 
 header {
   padding: 1rem 0;
+  background-color: #afd6df;
 }
 
 nav {
@@ -32,13 +33,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  position: relative;
 }
 
 .logo img {
   width: 100%;
   height: 100%;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 120px;
+  max-width: 120px;
   object-fit: cover;
   object-position: center;
 }
@@ -50,7 +52,7 @@ nav {
   height: 35px;
   border: 0;
   background-color: unset;
-  color: black;
+  color: white;
   font-size: 19px;
   padding: 0;
   transition: color 300ms;
@@ -72,7 +74,7 @@ nav {
 .menu-button span {
   width: 25px;
   height: 2px;
-  background-color: black;
+  background-color: white;
   display: block;
   position: relative;
   transition: background-color 300ms;
@@ -82,7 +84,7 @@ nav {
   content: "";
   height: inherit;
   width: 100%;
-  background-color: black;
+  background-color: white;
   display: inherit;
   transition: transform 300ms, top 300ms, background-color 300ms;
 }
@@ -93,57 +95,58 @@ nav {
   top: 6px;
 }
 .menu-button:hover, .menu-button:focus {
-  color: rgb(157, 157, 157);
+  color: black;
 }
 .menu-button:hover span,
 .menu-button:hover span::before,
 .menu-button:hover span::after, .menu-button:focus span,
 .menu-button:focus span::before,
 .menu-button:focus span::after {
-  background-color: rgb(157, 157, 157);
+  background-color: black;
 }
 
-.menu-header-menu-container {
+.main-nav {
   display: none;
   flex-direction: column;
   position: absolute;
   background: #fff;
   padding: 5px;
   gap: 0.625rem;
-  top: 154px;
+  top: 105px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 1;
   right: 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  margin-right: 10px;
+  margin: 0;
 }
-.menu-header-menu-container.hidden {
+.main-nav.hidden {
   display: flex;
 }
-.menu-header-menu-container.show {
+.main-nav.show {
   opacity: 1;
   visibility: visible;
 }
-.menu-header-menu-container::before {
+.main-nav::before {
   position: absolute;
   content: "";
-  background-color: black;
+  background-color: white;
   height: 17px;
   width: 17px;
-  right: 8px;
+  right: 3px;
   top: -17px;
   clip-path: polygon(51% 40%, 0 0, 100% 0);
 }
-.menu-header-menu-container ul {
+.main-nav ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.menu-header-menu-container ul li a {
-  text-decoration: none;
+.main-nav ul a {
   color: black;
 }
 
@@ -165,6 +168,33 @@ nav {
   width: 100%;
 }
 
+footer {
+  background-color: #afd6df;
+}
+footer .footer-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+footer .footer-inner img {
+  width: 240px;
+  height: 240px;
+}
+footer .footer-inner .widgets {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .footer-inner .widgets > * {
+  padding: 0.5rem;
+}
+footer .footer-inner .copyright {
+  align-self: center;
+}
+
 h1,
 h2,
 h3,
@@ -177,8 +207,20 @@ h6 {
 
 p,
 button,
-input {
+input,
+ul li,
+a {
   font-family: "roboto", sans-serif;
+}
+
+a:not(.logo) {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid transparent;
+  transition: border-color 300ms;
+}
+a:not(.logo):hover, a:not(.logo):focus {
+  border-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

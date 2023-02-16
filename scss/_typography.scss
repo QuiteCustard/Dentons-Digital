@@ -10,6 +10,19 @@ h6 {
 
 p,
 button,
-input {
+input,
+ul li,
+a {
     font-family: 'roboto', sans-serif;
+}
+
+a:not(.logo) {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid transparent;
+    transition: border-color 300ms;
+
+    &:hover, &:focus {
+        border-color: black;
+    }
 }

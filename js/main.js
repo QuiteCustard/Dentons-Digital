@@ -1,5 +1,5 @@
 const toggle = document.querySelector(".menu-button");
-const headerMenu = document.querySelector(".menu-header-menu-container");
+const headerMenu = document.querySelector(".main-nav");
 
 toggle.addEventListener("click", () =>{
     toggle.classList.toggle("open");
