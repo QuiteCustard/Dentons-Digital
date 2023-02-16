@@ -79,10 +79,13 @@ header {
         gap: 5px;
     }
 
-    input {
-        padding: 1rem;
+    input, textarea {
         border: 1px solid rgb(214, 214, 214);
         border-radius: 3px;
+    }
+
+    input {
+        padding: 1rem;
 
         &[type="submit"] {
             min-width: 150px;
@@ -127,8 +130,8 @@ footer {
         }
 
         .widgets {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minMax(calc(320px - 1rem), 1fr));
             padding: 0.5rem;
             align-items: center;
             justify-content: space-evenly;
