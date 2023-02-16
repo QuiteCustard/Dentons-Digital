@@ -13,7 +13,7 @@
     <?php wp_head();?>
 </head>
 <body>
-    <header>
+    <header class="container">
         <nav>
             <?php if (has_custom_logo()):
                 // Get Custom Logo URL
