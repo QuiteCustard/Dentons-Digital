@@ -27,6 +27,6 @@
             <?php else: ?>
                 <a class="logo" href=""><?php bloginfo('name'); ?></a>
             <?php endif; ?>
-            <button class="menu-button">Menu<span>1</span></button>
+            <button class="menu-button">Menu<span></span></button>
         </nav>
     </header>

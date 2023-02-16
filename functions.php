@@ -19,3 +19,7 @@ function samsTheme_setup() {
 }
 add_action('after_setup_theme', 'samsTheme_setup');
 
+function samsTheme_customScripts() {
+    wp_enqueue_script('samsTheme-main', get_stylesheet_directory_uri() . '/js/main.js', array ('jquery'), '', true);
+}   
+add_action( 'wp_enqueue_scripts', 'samsTheme_customScripts');

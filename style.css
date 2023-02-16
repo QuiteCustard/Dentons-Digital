@@ -3,21 +3,20 @@ Theme Name: Sams Theme
 Author: Sam Edwards
 Version: 1.0
 */
-
 html {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* Typography */
@@ -27,30 +26,94 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
-p, button, input {
-    font-family: 'roboto', sans-serif;
+p,
+button,
+input {
+  font-family: "roboto", sans-serif;
 }
 
 header {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
-    max-height: 150px;
-    max-width: 150px;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  max-height: 150px;
+  max-width: 150px;
+  object-fit: cover;
+  object-position: center;
 }
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 35px;
+  border: 0;
+  background-color: unset;
+  color: black;
+  font-size: 19px;
+  padding: 0;
+  transition: color 300ms;
+}
+.menu-button.open span {
+  background-color: transparent;
+}
+.menu-button.open span::before {
+  top: 0px;
+  transform: rotateZ(225deg);
+}
+.menu-button.open span::after {
+  top: -2px;
+  transform: rotateZ(135deg);
+}
+.menu-button.open:hover span, .menu-button.open:focus span {
+  background-color: transparent;
+}
+.menu-button span {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  display: block;
+  position: relative;
+  transition: background-color 300ms;
+}
+.menu-button span::before, .menu-button span::after {
+  position: relative;
+  content: "";
+  height: inherit;
+  width: 100%;
+  background-color: black;
+  display: inherit;
+  transition: transform 300ms, top 300ms, background-color 300ms;
+}
+.menu-button span::before {
+  top: -8px;
+}
+.menu-button span::after {
+  top: 6px;
+}
+.menu-button:hover, .menu-button:focus {
+  color: rgb(59, 59, 59);
+}
+.menu-button:hover span,
+.menu-button:hover span::before,
+.menu-button:hover span::after, .menu-button:focus span,
+.menu-button:focus span::before,
+.menu-button:focus span::after {
+  background-color: rgb(59, 59, 59);
+}
+
+/*# sourceMappingURL=style.css.map */
