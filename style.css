@@ -19,23 +19,6 @@ html {
   margin: 0;
 }
 
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-}
-
-p,
-button,
-input {
-  font-family: "roboto", sans-serif;
-}
-
 button {
   cursor: pointer;
 }
@@ -162,6 +145,22 @@ nav {
 .menu-header-menu-container ul li a {
   text-decoration: none;
   color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+p,
+button,
+input {
+  font-family: "roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
