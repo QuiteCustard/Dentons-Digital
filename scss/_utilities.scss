@@ -4,7 +4,7 @@ button {
 
 header {
     padding: 1rem 0;
-    background-color: #afd6df;
+    background-color: var(--header);
 }
 
 @import 'nav';
@@ -33,7 +33,7 @@ header {
 }
 
 footer {
-    background-color: #afd6df;
+    background-color: var(--footer);
 
     .footer-inner {
         display: flex;

@@ -19,13 +19,17 @@ body, header {
   margin: 0;
 }
 
+body {
+  background-color: var(--body);
+}
+
 button {
   cursor: pointer;
 }
 
 header {
   padding: 1rem 0;
-  background-color: #afd6df;
+  background-color: var(--header);
 }
 
 nav {
@@ -169,7 +173,7 @@ nav {
 }
 
 footer {
-  background-color: #afd6df;
+  background-color: var(--footer);
 }
 footer .footer-inner {
   display: flex;
