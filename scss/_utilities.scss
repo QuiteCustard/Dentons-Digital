@@ -22,12 +22,18 @@ header {
         grid-column: 1/-1;
 
         // Overide wordpress img defaults
-        figure, &:is(figure) {
+        figure,
+        &:is(figure) {
             width: 100%;
+            margin: 0;
+
+            &.header-img img {
+                max-height: 800px;
+            }
 
             img {
                 width: 100%;
-                max-height: 800px;
+                max-height: 600px;
                 object-fit: cover;
             }
         }
@@ -39,13 +45,32 @@ header {
     border-radius: 3px;
     margin-bottom: 10px;
 
-    .wp-block-columns, h2 {
+    * {
+        padding: 0;
         margin: 0;
+    }
+
+    .wp-block-button__link {
+        padding: 1rem;
+    }
+}
+
+.main-content {
+    margin: 1rem 0;
+
+    @media (width >=1024px) {
+        margin: 6rem 0;
     }
 }
 
 .wp-block-button__link {
-    border: 0!important;
+    border: 0 !important;
+    transition: background-color 300ms !important;
+
+    &:hover,
+    &:focus {
+        background-color: rgb(184, 184, 184) !important;
+    }
 }
 
 footer {
@@ -56,24 +81,24 @@ footer {
         flex-direction: column;
         padding: 1rem;
         width: 100%;
-    
+
         img {
             width: 240px;
             height: 240px;
         }
-    
+
         .widgets {
             display: flex;
             flex-wrap: wrap;
             padding: 0.5rem;
             align-items: center;
             justify-content: space-evenly;
-    
+
             >* {
                 padding: 0.5rem;
             }
         }
-    
+
         .copyright {
             align-self: center;
         }
