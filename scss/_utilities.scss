@@ -40,6 +40,14 @@ header {
     }
 }
 
+.main-content {
+    margin: 1rem 0;
+
+    @media (width >=1024px) {
+        margin: 6rem 0;
+    }
+}
+
 .cta {
     padding: 1rem;
     border-radius: 3px;
@@ -55,11 +63,42 @@ header {
     }
 }
 
-.main-content {
-    margin: 1rem 0;
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
-    @media (width >=1024px) {
-        margin: 6rem 0;
+    * {
+        margin: 0;
+    }
+
+    label {
+        font-size: clamp(16px, 4vh, 18px);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    input {
+        padding: 1rem;
+        border: 1px solid rgb(214, 214, 214);
+        border-radius: 3px;
+
+        &[type="submit"] {
+            min-width: 150px;
+            transition: background-color 300ms;
+            cursor: pointer;
+
+            &:focus, &:hover {
+                background-color: grey;
+            }
+        }
+    }
+
+    .wpcf7-response-output {
+        padding: 10px;
+        margin: 0;
+        font-family: 'roboto', sans-serif;
     }
 }
 
