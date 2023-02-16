@@ -37,6 +37,10 @@ input {
     font-family: 'roboto', sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 header {
     padding: 1rem;
 }
@@ -120,12 +124,62 @@ nav {
 
     &:hover,
     &:focus {
-        color: rgb(59, 59, 59);
+        color: rgb(157 157 157);
 
         span,
         span::before,
         span::after {
-            background-color: rgb(59, 59, 59);
+            background-color: rgb(157 157 157);
+        }
+    }
+}
+
+.menu-header-menu-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    gap: 0.625rem;
+    top: 154px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+    z-index: 1;
+    right: 0;
+    border: 1px solid rgba(0, 0, 0, .3);
+    margin-right: 10px;
+
+    &.hidden {
+        display: flex;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: black;
+        height: 17px;
+        width: 17px;
+        right: 8px;
+        top: -17px;
+        clip-path: polygon(51% 40%, 0 0, 100% 0);
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        list-style: none;
+
+        li a {
+            text-decoration: none;
+            color: black;
+
         }
     }
 }

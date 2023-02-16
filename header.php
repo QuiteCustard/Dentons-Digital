@@ -28,5 +28,10 @@
                 <a class="logo" href=""><?php bloginfo('name'); ?></a>
             <?php endif; ?>
             <button class="menu-button">Menu<span></span></button>
+            <?php
+                wp_nav_menu(array (
+                    'theme_location' => 'header',
+                ));
+            ?>
         </nav>
     </header>

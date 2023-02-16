@@ -36,6 +36,10 @@ input {
   font-family: "roboto", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   padding: 1rem;
 }
@@ -106,14 +110,58 @@ nav {
   top: 6px;
 }
 .menu-button:hover, .menu-button:focus {
-  color: rgb(59, 59, 59);
+  color: rgb(157, 157, 157);
 }
 .menu-button:hover span,
 .menu-button:hover span::before,
 .menu-button:hover span::after, .menu-button:focus span,
 .menu-button:focus span::before,
 .menu-button:focus span::after {
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(157, 157, 157);
+}
+
+.menu-header-menu-container {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  gap: 0.625rem;
+  top: 154px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1;
+  right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
+}
+.menu-header-menu-container.hidden {
+  display: flex;
+}
+.menu-header-menu-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+.menu-header-menu-container::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 17px;
+  width: 17px;
+  right: 8px;
+  top: -17px;
+  clip-path: polygon(51% 40%, 0 0, 100% 0);
+}
+.menu-header-menu-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+.menu-header-menu-container ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
