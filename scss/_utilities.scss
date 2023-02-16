@@ -22,14 +22,30 @@ header {
         grid-column: 1/-1;
 
         // Overide wordpress img defaults
-        figure {
+        figure, &:is(figure) {
             width: 100%;
 
             img {
                 width: 100%;
+                max-height: 800px;
+                object-fit: cover;
             }
         }
     }
+}
+
+.cta {
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 10px;
+
+    .wp-block-columns, h2 {
+        margin: 0;
+    }
+}
+
+.wp-block-button__link {
+    border: 0!important;
 }
 
 footer {

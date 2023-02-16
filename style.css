@@ -165,11 +165,26 @@ nav {
 .container .full-width {
   grid-column: 1/-1;
 }
-.container .full-width figure {
+.container .full-width figure, .container .full-width:is(figure) {
   width: 100%;
 }
-.container .full-width figure img {
+.container .full-width figure img, .container .full-width:is(figure) img {
   width: 100%;
+  max-height: 800px;
+  object-fit: cover;
+}
+
+.cta {
+  padding: 1rem;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.cta .wp-block-columns, .cta h2 {
+  margin: 0;
+}
+
+.wp-block-button__link {
+  border: 0 !important;
 }
 
 footer {
@@ -207,6 +222,12 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-weight: 300;
 }
 
 p,
